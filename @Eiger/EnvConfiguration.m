@@ -23,7 +23,7 @@ if CheckDLL()
     % H5 DLL OK
     EnvConfig = true;
 else
-    DLLPATH = fullfile(pwd,'+EigerFunc','H5DLL');
+    DLLPATH = fullfile(pwd,'@Eiger','H5DLL');
     cmd = sprintf('setx HDF5_PLUGIN_PATH "%s', DLLPATH);
     system(cmd);
     EnvConfig = false;
