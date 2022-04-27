@@ -1,5 +1,8 @@
 classdef ROI < handle
     properties
+        AdaptiveROI
+        UserDefineROI
+        DefaultROI
     end
     
     methods

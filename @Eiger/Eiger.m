@@ -14,8 +14,6 @@ classdef Eiger < handle
         BeamCenterX
         BeamCenterY
         PixelMask
-        DefaultROI
-        UserDefineROI
         EnviromentCheck
         Links
         RawImage % store raw data (multi-frame avaliable)
