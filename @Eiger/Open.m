@@ -19,7 +19,6 @@ obj.Wavelength = double(h5read(MasterFP,'/entry/instrument/beam/incident_wavelen
 obj.BeamCenterX= round(double(h5read(MasterFP,'/entry/instrument/detector/beam_center_x')));
 obj.BeamCenterY= round(double(h5read(MasterFP,'/entry/instrument/detector/beam_center_y')));
 obj.PixelMask = logical(transpose(h5read(MasterFP,'/entry/instrument/detector/detectorSpecific/pixel_mask')));
-obj.DefaultROI = ~obj.PixelMask;
 
 % get link file information
 temp = h5info(MasterFP,'/entry/data');
