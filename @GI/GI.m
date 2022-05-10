@@ -10,7 +10,7 @@ classdef GI < Eiger & ROI
         PoleqzAxis
         qzMap
         qrMap
-        DataReduceRatio = 0.8
+        DataReduceRatio = 0.9
         IntegralROI % only can be applied on the pole figure
     end
     
