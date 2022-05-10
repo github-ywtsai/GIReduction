@@ -16,8 +16,8 @@ obj.DetectorDistance = double(h5read(MasterFP,'/entry/instrument/detector/detect
 obj.XPixelSize = double(h5read(MasterFP,'/entry/instrument/detector/x_pixel_size')); % [m]
 obj.YPixelSize = double(h5read(MasterFP,'/entry/instrument/detector/y_pixel_size')); % [m]
 obj.Wavelength = double(h5read(MasterFP,'/entry/instrument/beam/incident_wavelength'))*1E-10; % read as [A], save as [m]
-obj.BeamCenterX= round(double(h5read(MasterFP,'/entry/instrument/detector/beam_center_x')));
-obj.BeamCenterY= round(double(h5read(MasterFP,'/entry/instrument/detector/beam_center_y')));
+obj.BeamCenterX= double(h5read(MasterFP,'/entry/instrument/detector/beam_center_x'));
+obj.BeamCenterY= double(h5read(MasterFP,'/entry/instrument/detector/beam_center_y'));
 obj.PixelMask = logical(transpose(h5read(MasterFP,'/entry/instrument/detector/detectorSpecific/pixel_mask')));
 
 % get link file information
