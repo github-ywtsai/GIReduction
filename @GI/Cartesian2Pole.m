@@ -28,8 +28,8 @@ OY = (obj.ReflectionCenterY + obj.BeamCenterY)/2;
 
 % create X and Y index matrix
 [YIdxMatrix,XIdxMatrix] = find(ones(obj.YPixelsInDetector,obj.XPixelsInDetector));
-YIdxMatrix = reshape(YIdxMatrix,obj.YPixelsInDetector,obj.XPixelsInDetector);
-XIdxMatrix = reshape(XIdxMatrix,obj.YPixelsInDetector,obj.XPixelsInDetector);
+YIdxMatrix = reshape(YIdxMatrix,obj.YPixelsInDetector,obj.XPixelsInDetector) - 1; % in H5, the original is start from 0,0
+XIdxMatrix = reshape(XIdxMatrix,obj.YPixelsInDetector,obj.XPixelsInDetector) - 1;
 
 % create the matries record the pixel distance of x and y to O point
 YPixelDistToOMatrix = YIdxMatrix-OY;
